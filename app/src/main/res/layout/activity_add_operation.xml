@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F7F8FC"
+    android:paddingStart="24dp"
+    android:paddingEnd="24dp"
+    android:paddingTop="32dp"
+    android:paddingBottom="24dp">
+
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Добавление операции"
+        android:textColor="#070B2D"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="14dp" />
+
+    <LinearLayout
+        android:id="@+id/typeButtonsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:orientation="horizontal"
+        android:layout_marginBottom="12dp">
+
+        <Button
+            android:id="@+id/btnIncomeType"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="Доход"
+            android:textSize="11sp"
+            android:textColor="#070B2D"
+            android:backgroundTint="#FFFFFF"
+            android:layout_marginEnd="8dp" />
+
+        <Button
+            android:id="@+id/btnExpenseType"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="Расход"
+            android:textSize="11sp"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#F05A3A"
+            android:layout_marginEnd="8dp" />
+
+        <Button
+            android:id="@+id/btnTransferType"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="Перевод"
+            android:textSize="11sp"
+            android:textColor="#070B2D"
+            android:backgroundTint="#FFFFFF" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Счет"
+        android:textSize="12sp"
+        android:textColor="#737992" />
+
+    <EditText
+        android:id="@+id/etAccount"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:text="Основной счет"
+        android:textSize="13sp"
+        android:background="@drawable/bg_input"
+        android:paddingStart="14dp"
+        android:paddingEnd="14dp"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Категория"
+        android:textSize="12sp"
+        android:textColor="#737992" />
+
+    <EditText
+        android:id="@+id/etCategory"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:text="Аренда"
+        android:textSize="13sp"
+        android:background="@drawable/bg_input"
+        android:paddingStart="14dp"
+        android:paddingEnd="14dp"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Сумма"
+        android:textSize="12sp"
+        android:textColor="#737992" />
+
+    <EditText
+        android:id="@+id/etAmount"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:hint="0"
+        android:text="45000"
+        android:textSize="13sp"
+        android:inputType="numberDecimal"
+        android:background="@drawable/bg_input"
+        android:paddingStart="14dp"
+        android:paddingEnd="14dp"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Дата"
+        android:textSize="12sp"
+        android:textColor="#737992" />
+
+    <EditText
+        android:id="@+id/etDate"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:text="25 мая 2024 г."
+        android:textSize="13sp"
+        android:background="@drawable/bg_input"
+        android:paddingStart="14dp"
+        android:paddingEnd="14dp"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Описание"
+        android:textSize="12sp"
+        android:textColor="#737992" />
+
+    <EditText
+        android:id="@+id/etDescription"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:text="Аренда офиса за май"
+        android:textSize="13sp"
+        android:background="@drawable/bg_input"
+        android:paddingStart="14dp"
+        android:paddingEnd="14dp" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <Button
+        android:id="@+id/btnSaveOperation"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:text="Сохранить"
+        android:textSize="13sp"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#F05A3A" />
+
+</LinearLayout>
