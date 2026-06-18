@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7F8FC">
+
+    <LinearLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="20dp"
+        android:paddingHorizontal="20dp"
+        android:layout_alignParentTop="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Операции"
+            android:textColor="#070B2D"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            android:layout_marginBottom="8dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnFilterAll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="Все"
+                    android:textColor="#4F46E5"
+                    android:backgroundTint="#EEF2FF"
+                    android:textSize="12sp"
+                    android:layout_marginEnd="8dp"/>
+
+                <Button
+                    android:id="@+id/btnFilterIncome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="Доходы"
+                    android:textColor="#737992"
+                    android:backgroundTint="#FFFFFF"
+                    android:textSize="12sp"
+                    android:layout_marginEnd="8dp"/>
+
+                <Button
+                    android:id="@+id/btnFilterExpense"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="Расходы"
+                    android:textColor="#737992"
+                    android:backgroundTint="#FFFFFF"
+                    android:textSize="12sp"/>
+            </LinearLayout>
+        </HorizontalScrollView>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/topBar"
+        android:layout_above="@id/bottomNavigation"
+        android:clipToPadding="false"
+        android:paddingBottom="80dp" />
+
+    <Button
+        android:id="@+id/btnNewOperation"
+        android:layout_width="200dp"
+        android:layout_height="52dp"
+        android:text="+ Новая операция"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#5CB85C"
+        android:layout_above="@id/bottomNavigation"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#FFFFFF"
+        app:menu="@menu/bottom_nav"
+        app:itemIconTint="@color/nav_color_selector"
+        app:itemTextColor="@color/nav_color_selector" />
+	app:labelVisibilityMode="labeled"
+
+</RelativeLayout>
